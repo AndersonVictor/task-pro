@@ -82,7 +82,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
           <h2>
             To fix it, try clearing your local files (cookies and cache) and then refresh the page.
             If the problem persists, please report the issue via{" "}
-            <StyledLink translate="no" href="https://github.com/maciekt07/TodoApp/issues">
+            <StyledLink translate="no" href="https://github.com/andersonvictor/TaskPro/issues">
               Github Issues
             </StyledLink>
             .
