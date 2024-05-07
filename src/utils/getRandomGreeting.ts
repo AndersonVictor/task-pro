@@ -27,7 +27,7 @@ export const getRandomGreeting = (): string => {
     "Libera tu potencial de productividad. **1f513**",
     "¡Convierte tu lista de tareas en una lista de cosas por hacer! **1f4dd**",
 
-    `Que tengas un maravilloso ${new Date().toLocaleDateString("en", {
+    `Que tengas un maravilloso ${new Date().toLocaleDateString("es", {
       weekday: "long",
     })}!`,
     `Feliz ${new Date().toLocaleDateString("es", {

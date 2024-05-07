@@ -179,7 +179,7 @@ export const TasksList: React.FC = () => {
       setDeleteDialogOpen(false);
       showToast(
         <div>
-          Deleted Task - <b>{user.tasks.find((task) => task.id === selectedTaskId)?.name}</b>
+          Tarea eliminada - <b>{user.tasks.find((task) => task.id === selectedTaskId)?.name}</b>
         </div>
       );
     }

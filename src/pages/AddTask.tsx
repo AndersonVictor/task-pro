@@ -120,7 +120,7 @@ const AddTask = () => {
 
   return (
     <>
-      <TopBar title="Agregar una nueva Tarea" />
+      <TopBar title="Agregar una Nueva Tarea" />
       <Container>
         <CustomEmojiPicker
           emoji={typeof emoji === "string" ? emoji : undefined}
