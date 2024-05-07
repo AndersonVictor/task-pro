@@ -1,9 +1,9 @@
 import { Category, Task } from "../types/user";
 import { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AddTaskButton, ColorPalette, Container, StyledInput } from "../styles";
-import { AddTaskRounded, CancelRounded, Edit } from "@mui/icons-material";
-import { Button, IconButton, InputAdornment, Tooltip } from "@mui/material";
+import { AddTaskRounded, CancelRounded } from "@mui/icons-material";
+import {  IconButton, InputAdornment, Tooltip } from "@mui/material";
 import { DESCRIPTION_MAX_LENGTH, TASK_NAME_MAX_LENGTH } from "../constants";
 import { CategorySelect, ColorPicker, TopBar, CustomEmojiPicker } from "../components";
 import { UserContext } from "../contexts/UserContext";

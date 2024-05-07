@@ -14,20 +14,13 @@ import {
 import styled from "@emotion/styled";
 import {
   AddRounded,
-  AdjustRounded,
-  BugReportRounded,
   CategoryRounded,
   DeleteForeverRounded,
   Favorite,
-  FavoriteRounded,
   FiberManualRecord,
   GetAppRounded,
-  GitHub,
-  InstallDesktopRounded,
-  InstallMobileRounded,
   Logout,
   SettingsRounded,
-  StarRounded,
   TaskAltRounded,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +32,6 @@ import { UserContext } from "../contexts/UserContext";
 import { iOS } from "../utils/iOS";
 import { fetchGitHubInfo } from "../services/githubApi";
 import { showToast, timeAgo } from "../utils";
-import bmcLogo from "../assets/bmc-logo.svg";
 
 export const ProfileSidebar = () => {
   const { user, setUser } = useContext(UserContext);
@@ -50,19 +42,19 @@ export const ProfileSidebar = () => {
   const [logoutConfirmationOpen, setLogoutConfirmationOpen] = useState<boolean>(false);
   const [openSettings, setOpenSettings] = useState<boolean>(false);
 
-  const [stars, setStars] = useState<number | null>(null);
+  const [] = useState<number | null>(null);
   const [lastUpdate, setLastUpdate] = useState<string | null>(null);
-  const [issuesCount, setIssuesCount] = useState<number | null>(null);
+  const [] = useState<number | null>(null);
 
-  const [bmcSupporters, setBmcSupporters] = useState<number | null>(null);
+  const [] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchRepoInfo: () => Promise<void> = async () => {
       try {
         const { repoData, branchData } = await fetchGitHubInfo();
-        setStars(repoData.stargazers_count);
+        (repoData.stargazers_count);
         setLastUpdate(branchData.commit.commit.committer.date);
-        setIssuesCount(repoData.open_issues_count);
+        (repoData.open_issues_count);
       } catch (error) {
         console.error(error);
       }
@@ -105,20 +97,19 @@ export const ProfileSidebar = () => {
     prompt(): Promise<void>;
   }
 
-  const [supportsPWA, setSupportsPWA] = useState<boolean>(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [isAppInstalled, setIsAppInstalled] = useState<boolean>(false);
+  const [ ] = useState<boolean>(false);
+  const [ ] = useState<BeforeInstallPromptEvent | null>(null);
+  const [ ] = useState<boolean>(false);
 
   useEffect(() => {
     const beforeInstallPromptHandler = (e: Event) => {
       e.preventDefault();
-      setSupportsPWA(true);
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
+      (true);
     };
 
     const detectAppInstallation = () => {
       window.matchMedia("(display-mode: standalone)").addEventListener("change", (e) => {
-        setIsAppInstalled(e.matches);
+        (e.matches);
       });
     };
 
@@ -130,31 +121,7 @@ export const ProfileSidebar = () => {
     };
   }, []);
 
-  const installPWA = () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === "accepted") {
-          showToast("App installed successfully!");
-          if ("setAppBadge" in navigator) {
-            setUser((prevUser) => ({
-              ...prevUser,
-              settings: [
-                {
-                  ...prevUser.settings[0],
-                  appBadge: true,
-                },
-              ],
-            }));
-          }
-          handleClose();
-        }
-        if (choiceResult.outcome === "dismissed") {
-          showToast("Installation dismissed.", { type: "error" });
-        }
-      });
-    }
-  };
+
 
   return (
     <Container>
@@ -500,11 +467,6 @@ const LogoContainer = styled.div`
   cursor: pointer;
 `;
 
-const BmcIcon = styled.img`
-  width: 1em;
-  height: 1em;
-  font-size: 1.5rem;
-`;
 
 const Logo = styled.img`
   width: 52px;
