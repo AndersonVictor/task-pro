@@ -2,8 +2,8 @@ import type { GitHubBranchResponse, GitHubInfoResponse, GitHubRepoResponse } fro
 import { showToast } from "../utils";
 
 export const fetchGitHubInfo = async (): Promise<GitHubInfoResponse> => {
-  const username = "maciekt07";
-  const repo = "TodoApp";
+  const username = "andersonvictor";
+  const repo = "task-pro";
   const branch = "main";
   try {
     const [repoResponse, branchResponse] = await Promise.all([
