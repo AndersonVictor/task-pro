@@ -319,11 +319,14 @@ export const ProfileSidebar = () => {
             {lastUpdate && (
               <Tooltip title={timeAgo(new Date(lastUpdate))}>
                 <span>
-                  Ultima actualización:{" "}
+                  Ultima actualización: 07 de mayo de 2024, 16:48:12
+                  
+                  {/* {" "}
                   {new Intl.DateTimeFormat(navigator.language, {
                     dateStyle: "long",
                     timeStyle: "medium",
-                  }).format(new Date(lastUpdate))}
+                  }).format(new Date(lastUpdate))} */}
+                  
                 </span>
               </Tooltip>
             )}
