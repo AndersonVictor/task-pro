@@ -332,7 +332,7 @@ const SharePage = () => {
               </p>
             </DialogContent>
             <DialogActions>
-              <DialogBtn onClick={() => n("/")}>Close</DialogBtn>
+              <DialogBtn onClick={() => n("/")}>Cerrar</DialogBtn>
             </DialogActions>
           </>
         )}
