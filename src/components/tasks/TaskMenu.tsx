@@ -485,22 +485,22 @@ export const TaskMenu: React.FC<TaskMenuProps> = ({
           },
         }}
       >
-        <DialogTitle>Share Task</DialogTitle>
+        <DialogTitle>Compartir Tarea</DialogTitle>
         <DialogContent>
           <span>
-            Share Task:{" "}
+            Compartir Tarea:{" "}
             <b translate="no">{tasks.find((task) => task.id === selectedTaskId)?.name}</b>
           </span>
           <Tabs value={shareTabVal} onChange={handleTabChange} sx={{ m: "8px 0" }}>
             <StyledTab label="Link" icon={<LinkRounded />} />
-            <StyledTab label="QR Code" icon={<QrCode2Rounded />} />
+            <StyledTab label="Código QR" icon={<QrCode2Rounded />} />
           </Tabs>
           <CustomTabPanel value={shareTabVal} index={0}>
             <ShareField
               value={generateShareableLink(selectedTaskId, name || "User")}
               fullWidth
               variant="outlined"
-              label="Shareable Link"
+              label="Enlace para compartir"
               InputProps={{
                 readOnly: true,
                 startAdornment: (
@@ -554,15 +554,13 @@ export const TaskMenu: React.FC<TaskMenuProps> = ({
                   saveQRCode(tasks.find((task) => task.id === selectedTaskId)?.name || "")
                 }
               >
-                <DownloadRounded /> &nbsp; Download QR Code
+                <DownloadRounded /> &nbsp; Descargarcódigo QR
               </DownloadQrCodeBtn>
             </Box>
           </CustomTabPanel>
           <Alert severity="info" sx={{ mt: "20px" }}>
-            <AlertTitle>Share Your Task</AlertTitle>
-            Share your task with others using the link or QR code. Copy the link to share manually
-            or use the share button to send it via other apps. You can also download the QR code for
-            easy access.
+            <AlertTitle>Compartir Tu Tarea</AlertTitle>
+            Comparte tu tarea con los demás utilizando el enlace o el código QR. Copia el enlace para compartirlo manualmente o utiliza el botón de compartir para enviarlo a través de otras aplicaciones. También puedes descargar el código QR para acceder fácilmente.
           </Alert>
           {/* <Alert severity="warning" sx={{ mt: "8px" }}>
             Anyone with access to this link will be able to view your name and task details.
