@@ -190,10 +190,10 @@ const SharePage = () => {
       >
         {!error && taskData ? (
           <>
-            <DialogTitle>Recieved Task</DialogTitle>
+            <DialogTitle>Tarea Recibida</DialogTitle>
             <DialogContent>
               <p style={{ fontSize: "16px", marginLeft: "6px" }}>
-                <b translate="no">{userName}</b> shared you a task.
+                <b translate="no">{userName}</b> te compartió una tarea.
               </p>
               <TaskContainer
                 done={taskData.done}
@@ -306,7 +306,7 @@ const SharePage = () => {
             </DialogContent>
             <DialogActions>
               <DialogBtn color="error" onClick={() => n("/")}>
-                <DoNotDisturbAltRounded /> &nbsp; Decline
+                <DoNotDisturbAltRounded /> &nbsp; Rechazar
               </DialogBtn>
               <DialogBtn
                 onClick={() => {
@@ -314,7 +314,7 @@ const SharePage = () => {
                   n("/");
                 }}
               >
-                <AddTaskRounded /> &nbsp; Add Task
+                <AddTaskRounded /> &nbsp; Agregar Tarea
               </DialogBtn>
             </DialogActions>
           </>
@@ -323,7 +323,7 @@ const SharePage = () => {
             <DialogTitle>Something went wrong</DialogTitle>
             <DialogContent>
               <p>
-                Oops! Something went wrong while processing the shared task.{" "}
+              ¡Ups! Algo ha ido mal al procesar la tarea compartida.{" "}
                 {errorDetails && (
                   <b>
                     <br /> {errorDetails}
