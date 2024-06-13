@@ -653,7 +653,7 @@ export const TasksList: React.FC = () => {
                     translate="yes"
                     style={{ opacity: 0.8, display: "flex", alignItems: "center", gap: "4px" }}
                   >
-                    <Link /> Shared by{" "}
+                    <Link /> Compartido por{" "}
                     <span translate={task.sharedBy === "User" ? "yes" : "no"}>{task.sharedBy}</span>
                   </div>
                 )}

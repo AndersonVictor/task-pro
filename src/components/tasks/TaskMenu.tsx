@@ -567,9 +567,9 @@ export const TaskMenu: React.FC<TaskMenuProps> = ({
           </Alert> */}
         </DialogContent>
         <DialogActions>
-          <DialogBtn onClick={() => setShowShareDialog(false)}>Close</DialogBtn>
+          <DialogBtn onClick={() => setShowShareDialog(false)}>Cerrar</DialogBtn>
           <DialogBtn onClick={handleShare}>
-            <IosShare sx={{ mb: "4px" }} /> &nbsp; Share
+            <IosShare sx={{ mb: "4px" }} /> &nbsp; Compartir
           </DialogBtn>
         </DialogActions>
       </Dialog>
