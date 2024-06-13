@@ -250,7 +250,7 @@ const SharePage = () => {
                           color: `${getFontColor(taskData.color)} !important`,
                         }}
                       />
-                      &nbsp;Deadline:&nbsp;
+                      &nbsp;Plazo:&nbsp;
                       {new Date(taskData.deadline).toLocaleDateString()} {" • "}
                       {new Date(taskData.deadline).toLocaleTimeString()}
                       {!taskData.done && (
